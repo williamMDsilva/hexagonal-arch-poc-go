@@ -1,0 +1,51 @@
+// Buscar usuário no banco de dados por email
+GET http://localhost:8080/getUserByEmail/teste@test.com
+Accept: application/json
+Authorization:
+###
+
+// Buscar usuário no banco de dados por email
+GET http://localhost:8080/getUserById/651225f2b5d6bedaf3b61327
+Accept: application/json
+Authorization:
+###
+
+// Criar um usuario dentro do banco de dados
+POST http://localhost:8080/createUser
+Content-Type: application/json
+
+{
+  "email": "teste@test.com",
+  "age": 20,
+  "password": "teste#!@!dwdw",
+  "name": "teste"
+}
+###
+
+// Atualiza um usuario já criado dentro do banco de dados
+// TODO - criar endpoint    
+PUT http://localhost:8080/updateUser/651225f2b5d6bedaf3b61327
+Content-Type: application/json
+
+{
+  "email": "otavio20313131@test.com",
+  "age": 90
+}
+###
+
+// Apaga um usuário do banco de dados dado um userId
+// TODO - criar endpoint    
+DELETE http://localhost:8080/deleteUser/651225f2b5d6bedaf3b61327
+Accept: application/json
+###
+
+// Realiza o login do usuário com email e senha
+// TODO - criar endpoint    
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "teste@test.com",
+  "password": "teste#!@!dwdw"
+}
+###
